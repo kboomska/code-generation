@@ -6,12 +6,18 @@ part 'user.g.dart';
 
 @freezed
 class User with _$User {
+  const User._();
+
   const factory User({
     required String name,
     @Default(30) int? age,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+
+  String infoUser() {
+    return 'My name is $name and I am $age years old';
+  }
 }
 
 // class User {

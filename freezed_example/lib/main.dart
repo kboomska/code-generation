@@ -18,4 +18,6 @@ void main() {
   final json = userA.toJson();
   print('User A toJson: $json');
   print('User A fromJson: ${User.fromJson(json)}');
+
+  print(userA.infoUser());
 }
