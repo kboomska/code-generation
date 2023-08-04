@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:equatable/equatable.dart';
 
 class User extends Equatable {
@@ -31,4 +33,22 @@ class User extends Equatable {
       age: age ?? this.age,
     );
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'age': age,
+    };
+  }
+
+  factory User.fromMap(Map<String, dynamic> map) {
+    return User(
+      name: map['name'] ?? '',
+      age: map['age']?.toInt() ?? 0,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory User.fromJson(String source) => User.fromMap(json.decode(source));
 }

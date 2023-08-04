@@ -14,4 +14,8 @@ void main() {
   final userCopyA = userA.copyWith(name: 'User A');
 
   print('User A Copy: $userCopyA');
+
+  final json = userA.toJson();
+  print('User A toJson: $json');
+  print('User A fromJson: ${User.fromJson(json)}');
 }
