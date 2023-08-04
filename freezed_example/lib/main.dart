@@ -15,7 +15,7 @@ void main() {
 
   print('User A Copy: $userCopyA');
 
-  // final json = userA.toJson();
-  // print('User A toJson: $json');
-  // print('User A fromJson: ${User.fromJson(json)}');
+  final json = userA.toJson();
+  print('User A toJson: $json');
+  print('User A fromJson: ${User.fromJson(json)}');
 }
