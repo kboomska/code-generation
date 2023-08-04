@@ -21,4 +21,14 @@ class User extends Equatable {
 
   @override
   List<Object?> get props => [name, age];
+
+  User copyWith({
+    String? name,
+    int? age,
+  }) {
+    return User(
+      name: name ?? this.name,
+      age: age ?? this.age,
+    );
+  }
 }

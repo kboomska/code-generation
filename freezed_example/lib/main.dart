@@ -8,4 +8,10 @@ void main() {
   print(userB.hashCode);
 
   print(userA == userB);
+
+  print('User A: $userA');
+
+  final userCopyA = userA.copyWith(name: 'User A');
+
+  print('User A Copy: $userCopyA');
 }
