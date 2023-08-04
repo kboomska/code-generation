@@ -1,4 +1,4 @@
-import 'package:freezed_example/models/user_model.dart';
+import 'package:freezed_example/models/user.dart';
 
 void main() {
   User userA = const User(name: 'User', age: 30);
@@ -11,11 +11,11 @@ void main() {
 
   print('User A: $userA');
 
-  final userCopyA = userA.copyWith(name: 'User A');
+  final userCopyA = userA.copyWith(name: 'User A', age: null);
 
   print('User A Copy: $userCopyA');
 
-  final json = userA.toJson();
-  print('User A toJson: $json');
-  print('User A fromJson: ${User.fromJson(json)}');
+  // final json = userA.toJson();
+  // print('User A toJson: $json');
+  // print('User A fromJson: ${User.fromJson(json)}');
 }
