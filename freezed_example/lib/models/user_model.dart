@@ -2,7 +2,7 @@ class User {
   final String name;
   final int age;
 
-  const User({
+  User({
     required this.name,
     required this.age,
   });
