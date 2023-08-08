@@ -1,5 +1,8 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
+
+part 'counter_bloc.freezed.dart';
 
 part 'counter_event.dart';
 part 'counter_state.dart';
