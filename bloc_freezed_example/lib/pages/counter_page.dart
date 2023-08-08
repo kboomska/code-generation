@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'package:bloc_freezed_example/bloc/counter_bloc.dart';
+
 class CounterPage extends StatelessWidget {
   const CounterPage({super.key});
 
@@ -16,7 +20,9 @@ class CounterPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<CounterBloc>().add(CounterEvent$Increment());
+            },
             tooltip: 'Increment',
             child: const Icon(
               Icons.add,
@@ -26,7 +32,9 @@ class CounterPage extends StatelessWidget {
             height: 20,
           ),
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<CounterBloc>().add(CounterEvent$Reset());
+            },
             tooltip: 'Reset',
             child: const Icon(
               Icons.refresh,
@@ -43,12 +51,21 @@ class _CounterText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text(
-      '0',
-      style: TextStyle(
-        fontSize: 60,
-        color: Colors.black54,
-      ),
-    );
+    final state = context.watch<CounterBloc>().state;
+
+    if (state is CounterState$Initial) {
+      return const FlutterLogo(size: 120);
+    } else if (state is CounterState$Loading) {
+      return const CircularProgressIndicator();
+    } else if (state is CounterState$Loaded) {
+      return Text(
+        '${state.counter}',
+        style: const TextStyle(
+          fontSize: 60,
+          color: Colors.black54,
+        ),
+      );
+    }
+    return const SizedBox.shrink();
   }
 }
