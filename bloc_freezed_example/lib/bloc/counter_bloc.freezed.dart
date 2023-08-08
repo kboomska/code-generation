@@ -403,3 +403,426 @@ class _$CounterEvent$Increment implements CounterEvent$Increment {
 abstract class CounterEvent$Increment implements CounterEvent {
   const factory CounterEvent$Increment() = _$CounterEvent$Increment;
 }
+
+/// @nodoc
+mixin _$CounterState {
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(int counter) loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(int counter)? loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(int counter)? loaded,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CounterState$Initial value) initial,
+    required TResult Function(_CounterState$Loading value) loading,
+    required TResult Function(_CounterState$Loaded value) loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CounterState$Initial value)? initial,
+    TResult? Function(_CounterState$Loading value)? loading,
+    TResult? Function(_CounterState$Loaded value)? loaded,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CounterState$Initial value)? initial,
+    TResult Function(_CounterState$Loading value)? loading,
+    TResult Function(_CounterState$Loaded value)? loaded,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CounterStateCopyWith<$Res> {
+  factory $CounterStateCopyWith(
+          CounterState value, $Res Function(CounterState) then) =
+      _$CounterStateCopyWithImpl<$Res, CounterState>;
+}
+
+/// @nodoc
+class _$CounterStateCopyWithImpl<$Res, $Val extends CounterState>
+    implements $CounterStateCopyWith<$Res> {
+  _$CounterStateCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+}
+
+/// @nodoc
+abstract class _$$_CounterState$InitialCopyWith<$Res> {
+  factory _$$_CounterState$InitialCopyWith(_$_CounterState$Initial value,
+          $Res Function(_$_CounterState$Initial) then) =
+      __$$_CounterState$InitialCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CounterState$InitialCopyWithImpl<$Res>
+    extends _$CounterStateCopyWithImpl<$Res, _$_CounterState$Initial>
+    implements _$$_CounterState$InitialCopyWith<$Res> {
+  __$$_CounterState$InitialCopyWithImpl(_$_CounterState$Initial _value,
+      $Res Function(_$_CounterState$Initial) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CounterState$Initial implements _CounterState$Initial {
+  const _$_CounterState$Initial();
+
+  @override
+  String toString() {
+    return 'CounterState.initial()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CounterState$Initial);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(int counter) loaded,
+  }) {
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(int counter)? loaded,
+  }) {
+    return initial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(int counter)? loaded,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CounterState$Initial value) initial,
+    required TResult Function(_CounterState$Loading value) loading,
+    required TResult Function(_CounterState$Loaded value) loaded,
+  }) {
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CounterState$Initial value)? initial,
+    TResult? Function(_CounterState$Loading value)? loading,
+    TResult? Function(_CounterState$Loaded value)? loaded,
+  }) {
+    return initial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CounterState$Initial value)? initial,
+    TResult Function(_CounterState$Loading value)? loading,
+    TResult Function(_CounterState$Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CounterState$Initial implements CounterState {
+  const factory _CounterState$Initial() = _$_CounterState$Initial;
+}
+
+/// @nodoc
+abstract class _$$_CounterState$LoadingCopyWith<$Res> {
+  factory _$$_CounterState$LoadingCopyWith(_$_CounterState$Loading value,
+          $Res Function(_$_CounterState$Loading) then) =
+      __$$_CounterState$LoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_CounterState$LoadingCopyWithImpl<$Res>
+    extends _$CounterStateCopyWithImpl<$Res, _$_CounterState$Loading>
+    implements _$$_CounterState$LoadingCopyWith<$Res> {
+  __$$_CounterState$LoadingCopyWithImpl(_$_CounterState$Loading _value,
+      $Res Function(_$_CounterState$Loading) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_CounterState$Loading implements _CounterState$Loading {
+  const _$_CounterState$Loading();
+
+  @override
+  String toString() {
+    return 'CounterState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_CounterState$Loading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(int counter) loaded,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(int counter)? loaded,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(int counter)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CounterState$Initial value) initial,
+    required TResult Function(_CounterState$Loading value) loading,
+    required TResult Function(_CounterState$Loaded value) loaded,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CounterState$Initial value)? initial,
+    TResult? Function(_CounterState$Loading value)? loading,
+    TResult? Function(_CounterState$Loaded value)? loaded,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CounterState$Initial value)? initial,
+    TResult Function(_CounterState$Loading value)? loading,
+    TResult Function(_CounterState$Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CounterState$Loading implements CounterState {
+  const factory _CounterState$Loading() = _$_CounterState$Loading;
+}
+
+/// @nodoc
+abstract class _$$_CounterState$LoadedCopyWith<$Res> {
+  factory _$$_CounterState$LoadedCopyWith(_$_CounterState$Loaded value,
+          $Res Function(_$_CounterState$Loaded) then) =
+      __$$_CounterState$LoadedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({int counter});
+}
+
+/// @nodoc
+class __$$_CounterState$LoadedCopyWithImpl<$Res>
+    extends _$CounterStateCopyWithImpl<$Res, _$_CounterState$Loaded>
+    implements _$$_CounterState$LoadedCopyWith<$Res> {
+  __$$_CounterState$LoadedCopyWithImpl(_$_CounterState$Loaded _value,
+      $Res Function(_$_CounterState$Loaded) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? counter = null,
+  }) {
+    return _then(_$_CounterState$Loaded(
+      counter: null == counter
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_CounterState$Loaded implements _CounterState$Loaded {
+  const _$_CounterState$Loaded({required this.counter});
+
+  @override
+  final int counter;
+
+  @override
+  String toString() {
+    return 'CounterState.loaded(counter: $counter)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CounterState$Loaded &&
+            (identical(other.counter, counter) || other.counter == counter));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, counter);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CounterState$LoadedCopyWith<_$_CounterState$Loaded> get copyWith =>
+      __$$_CounterState$LoadedCopyWithImpl<_$_CounterState$Loaded>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(int counter) loaded,
+  }) {
+    return loaded(counter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(int counter)? loaded,
+  }) {
+    return loaded?.call(counter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(int counter)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(counter);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_CounterState$Initial value) initial,
+    required TResult Function(_CounterState$Loading value) loading,
+    required TResult Function(_CounterState$Loaded value) loaded,
+  }) {
+    return loaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_CounterState$Initial value)? initial,
+    TResult? Function(_CounterState$Loading value)? loading,
+    TResult? Function(_CounterState$Loaded value)? loaded,
+  }) {
+    return loaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_CounterState$Initial value)? initial,
+    TResult Function(_CounterState$Loading value)? loading,
+    TResult Function(_CounterState$Loaded value)? loaded,
+    required TResult orElse(),
+  }) {
+    if (loaded != null) {
+      return loaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _CounterState$Loaded implements CounterState {
+  const factory _CounterState$Loaded({required final int counter}) =
+      _$_CounterState$Loaded;
+
+  int get counter;
+  @JsonKey(ignore: true)
+  _$$_CounterState$LoadedCopyWith<_$_CounterState$Loaded> get copyWith =>
+      throw _privateConstructorUsedError;
+}
