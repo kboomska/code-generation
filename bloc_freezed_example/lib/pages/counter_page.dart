@@ -21,7 +21,7 @@ class CounterPage extends StatelessWidget {
         children: [
           FloatingActionButton(
             onPressed: () {
-              context.read<CounterBloc>().add(CounterEvent$Increment());
+              context.read<CounterBloc>().add(const CounterEvent.increment());
             },
             tooltip: 'Increment',
             child: const Icon(
@@ -33,7 +33,7 @@ class CounterPage extends StatelessWidget {
           ),
           FloatingActionButton(
             onPressed: () {
-              context.read<CounterBloc>().add(CounterEvent$Reset());
+              context.read<CounterBloc>().add(const CounterEvent.reset());
             },
             tooltip: 'Reset',
             child: const Icon(
@@ -53,19 +53,16 @@ class _CounterText extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = context.watch<CounterBloc>().state;
 
-    if (state is CounterState$Initial) {
-      return const FlutterLogo(size: 120);
-    } else if (state is CounterState$Loading) {
-      return const CircularProgressIndicator();
-    } else if (state is CounterState$Loaded) {
-      return Text(
-        '${state.counter}',
+    return state.when(
+      initial: () => const FlutterLogo(size: 120),
+      loading: () => const CircularProgressIndicator(),
+      loaded: (counter) => Text(
+        '$counter',
         style: const TextStyle(
           fontSize: 60,
           color: Colors.black54,
         ),
-      );
-    }
-    return const SizedBox.shrink();
+      ),
+    );
   }
 }
