@@ -8,22 +8,22 @@ part 'counter_state.dart';
 
 final class CounterBloc extends Bloc<CounterEvent, CounterState> {
   CounterBloc({CounterState? initialState})
-      : super(initialState ?? CounterState$Initial()) {
+      : super(initialState ?? const CounterState.initial()) {
     on<CounterEvent>(
       (event, emit) async {
         if (event is CounterEvent$Start) {
           await Future.delayed(const Duration(milliseconds: 5000));
-          emit(const CounterState$Loaded(counter: 0));
+          emit(const CounterState.loaded(counter: 0));
         } else if (event is CounterEvent$Reset) {
-          emit(CounterState$Loading());
+          emit(const CounterState.loading());
           await Future.delayed(const Duration(milliseconds: 1500));
-          emit(const CounterState$Loaded(counter: 0));
+          emit(const CounterState.loaded(counter: 0));
         } else if (event is CounterEvent$Increment) {
-          if (state is CounterState$Loaded) {
-            final counter = (state as CounterState$Loaded).counter;
-            emit(CounterState$Loading());
+          if (state is _CounterState$Loaded) {
+            final counter = (state as _CounterState$Loaded).counter;
+            emit(const CounterState.loading());
             await Future.delayed(const Duration(milliseconds: 500));
-            emit(CounterState$Loaded(counter: counter + 1));
+            emit(CounterState.loaded(counter: counter + 1));
           }
         }
       },
